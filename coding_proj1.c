@@ -13,13 +13,21 @@ int main() {
 	bool accept_state = false;
 	char states_arr[STATES_SIZE];
 	char transtions_arr[TRANSITIONS];
+	char * type_of_state;
+	char * start;
 
 	FILE *fp;
 	fp = fopen("sample_1.txt", "r");
-	char line[10000];
+	char line[1000];
+	int i = 0;
 
 	while(fgets(line, sizeof(line), fp)) {
-		printf("%s", line);
+		type_of_state = strtok(line, "\t\n");
+		if(type_of_state == "state") {
+			//states_arr[i] = (where state is, what kind of state)
+			i++;
+		start = strtok(NULL, " ");
+		printf("%s\n", type_of_state);
 		}
 
 	fclose(fp);
