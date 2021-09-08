@@ -26,6 +26,7 @@ int main() {
 		if(type_of_state == "state") {
 			//states_arr[i] = (where state is, what kind of state)
 			i++;
+		}
 		start = strtok(NULL, " ");
 		printf("%s\n", type_of_state);
 		}
