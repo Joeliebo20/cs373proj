@@ -1,10 +1,10 @@
-all: coding_proj
+all: lieberman
 
-coding_proj: coding_proj.o
-	g++ coding_proj.o -o proj.exe
+lieberman: lieberman_p1.o
+	g++ lieberman_p1.o -o lieberman_p1
 
-coding_proj.o: coding_proj.cpp
-	g++ -c coding_proj.cpp
+lieberman.o: lieberman_p1.cpp
+	g++ -c lieberman_p1.cpp
 
 clean:
-	rm -f *.o proj.exe
+	rm -f *.o lieberman_p1
